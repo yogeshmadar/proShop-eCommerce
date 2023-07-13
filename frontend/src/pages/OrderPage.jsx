@@ -192,6 +192,14 @@ const OrderPage = () => {
                   <Col>${order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
+              <ListGroup.Item>
+                <p>
+                  ℹ️ PayPal not supporting for Indain currency, However we are
+                  not accepting real payment.
+                  <br /> Feel free use <strong>Test Pay Order</strong> for
+                  Payment{" "}
+                </p>
+              </ListGroup.Item>
 
               {!order.isPaid && (
                 <ListGroup.Item>
@@ -211,6 +219,7 @@ const OrderPage = () => {
                           createOrder={createOrder}
                           onApprove={onApprove}
                           onError={onError}
+                          disabled={true}
                         ></PayPalButtons>
                       </div>
                     </div>
